@@ -67,8 +67,26 @@ recall=TP/(TP+FN)
 print('Accuracy: ',accuracy,'\nPrecision:',precision,'\nRecall:',recall)
 
 
+#smv with linear kaernal
+# C = 1000 wr are getting 82% accuracy
+svmlclf = svm.LinearSVC(C=1000)
+svmlclf.fit(X_train, y_train)
+y_pred = svmlclf.predict(X_test)
+pa = pd.DataFrame({'Actual': y_test.flatten(), 'Predicted': y_pred.flatten()})
+print(pa)
+from sklearn.metrics import confusion_matrix
+cm = confusion_matrix( y_pred, y_test)
+print("confusion matrix")
+print(cm)
+TN=cm[0][0]
+FN=cm[1][0]
+TP=cm[1][1]
+FP=cm[0][1]
+accuracy=(TN+TP)/(TN+TP+FN+FP)
+precision=(TP)/(TP+FP)
+recall=TP/(TP+FN)
 
-#  UMER##################################################
+print('Accuracy: ',accuracy,'\nPrecision:',precision,'\nRecall:',recall)
 
 
 
