@@ -1,0 +1,62 @@
+1> regression vs classification
+
+The main difference between them is that the output variable in regression
+is numerical (or continuous) while that for classification is categorical (or discrete).
+regression:
+    For example, when provided with a dataset about houses, and you are asked to predict
+    their prices, that is a regression task because price will be a continuous output.
+classification:
+    For example, when provided with a dataset about houses, a classification algorithm
+    can try to predict whether the prices for the houses “sell more or less than the recommended retail price.”
+=================================================================================================================================
+
+2> k fold cross validation
+
+k-Fold Cross-Validation. Cross-validation is a resampling procedure used to evaluate machine learning 
+models on a limited data sample. The procedure has a single parameter called k that refers to the number 
+of groups that a given data sample is to be split into.
+
+Because it ensures that every observation from the original dataset has the chance of appearing in training 
+and test set. This is one among the best approach if we have a limited input data. ... 
+Repeat this process until every K-fold serve as the test set 
+
+=================================================================================================================================
+3> k nearest neighbour regression
+
+K nearest neighbors is a simple algorithm that stores all available cases and predict the numerical target based 
+on a similarity measure (e.g., distance functions). KNN has been used in statistical estimation and pattern 
+recognition already in the beginning of 1970’s as a non-parametric technique. 
+
+=================================================================================================================================
+4> svr(support vector regression)
+
+Support Vector Regression tries to fit the best line within a predefined or threshold error value. 
+
+=================================================================================================================================
+5> random forest regression
+
+The basic idea behind this is to combine multiple decision trees in determining the final 
+output rather than relying on individual decision trees.
+Pick at random K data points from the training set.
+Build the decision tree associated with those K data points.
+Choose the number Ntree of trees you want to build and repeat step 1 & 2.
+For a new data point, make each one of your Ntree trees predict the value of Y for the data 
+-point, and assign the new data point the average across all of the predicted Y values.
+=================================================================================================================================
+
+6> linear regression
+
+Linear regression is a common Statistical Data Analysis technique.  It is used to determine the extent 
+to which there is a linear relationship between a dependent variable and one or more independent variables.
+Finds the value of dependent variable wrt independent variable.
+=================================================================================================================================
+
+In this paper, we introduce an Ensemble methodology called stacking, then make some improvements 
+to it using the idea of the Boosting method and achieve good experimental results. Almost all 
+models rely on specific parameters to achieve the best results. Therefore, most of them have 
+limitations in different scenarios. The weighted multiple meta-models stacking method tries 
+to combine the advantages of each algorithm and produce better results. However, there are 
+still many problems to be solved, one of which is that we have not considered how to choose 
+base models by other means but only by selecting models with the best performance. 
+Maybe we can consider the characteristics and the principles of the model instead of the 
+weak accuracy gap between models. We hope the further improvements in the future.
